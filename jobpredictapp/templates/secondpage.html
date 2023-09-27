@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>-->
+    <link rel="stylesheet" href="{% static 'css/job.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <CENTER><div class="container">
+    <div class="title">Send Resume</div>
+    <div class="content">
+	<form action="mailto:gorivedanti871@gmail.com" method="post" enctype="text/plain">
+        <div class="user-details">
+          <div class="input-box">
+            <div class="mb-3" style="width: 300px;">
+            Name:<br> 
+            <input type="text" name="name"><br>
+			E-mail:<br>
+            <input type="text" name="mail"><br>
+            Subject:<br>
+            <input type="text" name="comment" size="50"><br><br>
+			{% comment %} <input class="form-control" type="file" id="formFile"> {% endcomment %}
+      <h3>{{answer}}</h3>
+			<div class="button">
+            <input type="submit" value="Send"><br><br>
+            <input type="reset" value="Reset">
+			</div>
+            </form>
+            {% comment %} <h3>{{answer}}</h3> {% endcomment %}
+        </div>
+        </div>
+		</CENTER>
+		</body>
+		</html>

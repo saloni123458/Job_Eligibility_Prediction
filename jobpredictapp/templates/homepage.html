@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <title> Responsive Registration Form | CodingLab </title> -->
+    <link rel="stylesheet" href="{% static 'css/job.css' %}">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Job Eligibility Prediction</div>
+    <div class="content">
+      <form action={% url 'secondpage' %}>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Jobs Available</span>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="designation">
+              <option selected>Jobs Available</option>
+                <option value="Full stack developer">Full stack devoloper</option>
+                <option value="Data analyst">Data analyst</option>
+                <option value="Cyber security engineer">Cyber security engineer</option>
+                <option value="Database administrator">Database administrator</option>
+                <option value="Web designer">Web designer</option>
+                <option value="DevOps engineer">DevOps engineer </option>
+            </select> 
+          </div>
+          <div class="input-box">
+            <span class="details">Education</span>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="qualification">
+              <option selected>Education</option>
+                <option value="M.Sc(Science)">M.Sc(Science)</option>
+                <option value="B.Tech (Engineering)">B.Tech (Engineering)</option>
+                <option value="MBA">MBA</option>
+                <option value="Database administrator">Database administrator</option>
+                <option value="BE/ B.Tech (Engineering)">BE/ B.Tech (Engineering)</option>
+                <option value="Diploma-Engineering">Diploma-Engineering</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Technical Skill 1</span>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tech1">
+        <option selected>Technical Skill 1</option>
+          <option value="Front-end languages">Front-end languages </option>
+          <option value="Database management">Database management</option>
+          <option value="Machine learning">Machine learning</option>
+          <option value="Programming Languages ">Programming Languages </option>
+          <option value="Backend Developer">Backend Developer</option>
+          <option value="Deep learning">Deep learning</option>
+          <option value="Cloud computing">Cloud computing</option>
+          <option value="Android development">Android development</option>
+          <option value="Cyber Security">Cyber Security</option>
+          <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+          <option value="Operating System">Operating System</option>
+          <option value="UI/UX Designer">UI/UX Designer</option>
+
+      </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Technical Skill 2</span>
+    <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="tech2">
+        <option selected>Technical Skill 2</option>
+          <option value="Front-end languages ">Front-end languages </option>
+          <option value="Database management">Database management</option>
+          <option value="Machine learning">Machine learning</option>
+          <option value="Programming Languages">Programming Languages </option>
+          <option value="Backend Developer">Backend Developer</option>
+          <option value="Deep learning">Deep learning</option>
+          <option value="Cloud computing">Cloud computing</option>
+          <option value="Android development">Android development</option>
+          <option value="Cyber Security">Cyber Security</option>
+          <option value="Data Structure and Algorithm">Data Structure and Algorithm</option>
+          <option value="Operating System">Operating System</option>
+          <option value="UI/UX Designer">UI/UX Designer</option>
+      </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Non-Technical Skills</span>
+             <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Non-Technical Skill 1</option>
+              <option value="1">Meticulous attention to detail</option>
+              <option value="2">Logical approach to work</option>
+              <option value="3">Ability to prioritise tasks</option>
+              <option value="4">Problem-solving skills</option>
+              <option value="5">Good organisational skills</option>
+              <option value="6">Communication and Interpersonal skills</option>
+              <option value="7">Leadership</option>
+              <option value="8">Time Management</option>
+          </select>
+          </div>
+          <div class="input-box">
+            <span class="details">Non-Technical Skills</span>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+            <option selected>Non-Technical Skill 2</option>
+              <option value="1">Meticulous attention to detail</option>
+              <option value="2">Logical approach to work</option>
+              <option value="3">Ability to prioritise tasks</option>
+              <option value="4">Problem-solving skills</option>
+              <option value="5">Good organisational skills</option>
+              <option value="6">Communication and Interpersonal skills</option>
+              <option value="7">Leadership</option>
+              <option value="8">Time Management</option>
+          </select>
+          </div>
+        </div>
+        <div class="gender-details">
+          <h5>Year of Experience</h5>
+        <div>
+          <span id="rangeValue">0</span>
+          <Input class="range" type="range" name="exp" value="0" min="0" max="10" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></Input>
+      </div>
+      <script type="text/javascript">
+          function rangeSlide(value) {
+              document.getElementById('rangeValue').innerHTML = value;
+          }
+          </script>
+        </div>
+        <h3>{{answer}}</h3>
+        <div class="button">
+          {% comment %} <p><a href="{% url 'secondpage' %}">Home</a></p> {% endcomment %}
+          <input type="submit"  value="Predict Eligibility">
+        </div>
+      </form>
+      
+    </div>
+  </div>
+
+</body>
+</html>
